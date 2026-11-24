@@ -1,0 +1,17 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        google() {
+            metadataSources {
+                mavenPom()
+            }
+        }
+        mavenCentral() {
+            metadataSources {
+                mavenPom()
+            }
+        }
+    }
+}
+rootProject.name = "VitWifiConnect"
+include ':app'

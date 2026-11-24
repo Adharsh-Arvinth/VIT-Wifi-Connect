@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Base configuration: Allow cleartext traffic and user/system certificates -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Pronto captive portal domain: explicitly permit cleartext and all certificates -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">phc.prontonetworks.com</domain>
+        <domain includeSubdomains="true">prontonetworks.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </domain-config>
+
+    <!-- Google 204 probe endpoint -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">clients3.google.com</domain>
+        <domain includeSubdomains="true">connectivitycheck.gstatic.com</domain>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

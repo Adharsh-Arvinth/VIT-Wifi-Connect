@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Install VIT WiFi Connect for iOS</title>
+    <style>
+        :root {
+            --bg: #08090C;
+            --card: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.12);
+            --accent: #10B981;
+            --accent-glow: rgba(16, 185, 129, 0.35);
+            --text: #F4F4F6;
+            --text-muted: #9CA3AF;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 36px 20px 48px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .ambient-orb {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: blur(50px);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .container {
+            width: 100%;
+            max-width: 440px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .app-icon {
+            width: 88px;
+            height: 88px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 12px 32px var(--accent-glow);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 6px; }
+        .version-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 28px;
+        }
+        .btn {
+            width: 100%;
+            padding: 16px;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #10B981, #059669);
+            color: #08090C;
+            box-shadow: 0 8px 24px var(--accent-glow);
+            border: none;
+        }
+        .btn-primary:active { transform: scale(0.98); }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .card {
+            width: 100%;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 18px;
+            text-align: left;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .card h2 { font-size: 15px; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+        .steps { list-style: none; counter-reset: step; }
+        .steps li {
+            position: relative;
+            padding-left: 32px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        .steps li:last-child { margin-bottom: 0; }
+        .steps li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+        .footer {
+            margin-top: 36px;
+            font-size: 12px;
+            color: #6B7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-orb"></div>
+    <div class="container">
+        <img src="../app/src/main/res/drawable/app_logo_hero.png" alt="VIT WiFi Icon" class="app-icon">
+        <h1>VIT WiFi Connect</h1>
+        <div class="version-badge">v1.0.0 · 120 FPS ProMotion Edition</div>
+        <p class="desc">One-click, lightning-fast authentication for VIT Campus Wi-Fi. Zero battery drain, total privacy, and 6 Apple Music curated themes.</p>
+
+        <!-- Method 1: Direct Download IPA -->
+        <a href="../VITWiFiConnect.ipa" download="VITWiFiConnect.ipa" class="btn btn-primary">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
+            Download VITWiFiConnect.ipa
+        </a>
+
+        <!-- Method 2: Direct OTA Install -->
+        <a id="otaBtn" href="#" class="btn btn-secondary">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            Install Direct (OTA Safari)
+        </a>
+
+        <!-- 1-Click Install Guide for iPhone -->
+        <div class="card">
+            <h2>Instant 1-Click Install on iPhone (No Xcode)</h2>
+            <ol class="steps">
+                <li><strong>Scarlet (Zero Computer Needed)</strong>: Open Safari on your iPhone, go to <code>usescarlet.com</code>, tap Install. Open Scarlet, tap the install button and pick <code>VITWiFiConnect.ipa</code>. Done!</li>
+                <li><strong>TrollStore (Permanent / Zero Revoke)</strong>: If your device has TrollStore, tap <code>VITWiFiConnect.ipa</code> and select "Open in TrollStore" for instant permanent installation.</li>
+                <li><strong>Sideloadly / AltStore (Free 1-Click PC/Mac)</strong>: Plug your iPhone in, drag <code>VITWiFiConnect.ipa</code> into Sideloadly, and click Start.</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>Control Center & ProMotion Features</h2>
+            <ol class="steps">
+                <li><strong>Control Center Tool</strong>: Add an Apple Shortcut with action <code>Open URL: vitwifi://toggle</code> to connect/disconnect in 1 click from your iPhone Control Center or Action Button.</li>
+                <li><strong>120 FPS ProMotion</strong>: Ultra-smooth liquid animations unlocked natively on ProMotion displays.</li>
+            </ol>
+        </div>
+
+        <div class="footer">100% Private · Zero Telemetry · Made for VITians</div>
+    </div>
+
+    <script>
+        // Dynamically wire OTA link if hosted
+        const currentUrl = window.location.href;
+        if (currentUrl.startsWith('https://')) {
+            const manifestUrl = currentUrl.replace('install.html', 'manifest.plist');
+            document.getElementById('otaBtn').href = 'itms-services://?action=download-manifest&url=' + encodeURIComponent(manifestUrl);
+        } else {
+            document.getElementById('otaBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('For direct Safari OTA install, the link must be hosted on an HTTPS URL. For local files, download VITWiFiConnect.ipa and open in Scarlet, TrollStore, or Sideloadly!');
+            });
+        }
+    </script>
+</body>
+</html>

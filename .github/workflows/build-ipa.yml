@@ -1,0 +1,48 @@
+name: Build iOS IPA
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    runs-on: macos-14
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
+
+      - name: Build Archive
+        run: |
+          xcodebuild -project ios/VITWiFiConnect.xcodeproj \
+            -scheme VITWiFiConnect \
+            -destination 'generic/platform=iOS' \
+            -archivePath build/VITWiFiConnect.xcarchive \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            archive
+
+      - name: Package IPA
+        run: |
+          mkdir -p Payload
+          cp -r build/VITWiFiConnect.xcarchive/Products/Applications/VITWiFiConnect.app Payload/
+          zip -r VITWiFiConnect.ipa Payload
+          rm -rf Payload
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: VITWiFiConnect-iOS-IPA
+          path: VITWiFiConnect.ipa
+
+      - name: Create Release on Tag or Dispatch
+        if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'workflow_dispatch'
+        uses: softprops/action-gh-release@v1
+        with:
+          files: VITWiFiConnect.ipa
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

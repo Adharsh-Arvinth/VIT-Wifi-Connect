@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/space_24"
+        android:paddingVertical="@dimen/space_32">
+
+        <!-- Logo / Brand Glyph -->
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="@dimen/space_16"
+            android:layout_marginBottom="@dimen/space_20"
+            android:src="@drawable/app_logo_hero"
+            android:contentDescription="@string/app_name" />
+
+        <!-- Headline -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onboarding_title"
+            style="@style/TextAppearance.Vit.Display" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_marginBottom="@dimen/space_28"
+            android:text="@string/onboarding_subtitle"
+            style="@style/TextAppearance.Vit.Subhead" />
+
+        <!-- Keystore Security Callout Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_subsurface"
+            android:padding="@dimen/space_16"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/space_24">
+
+            <ImageView
+                android:layout_width="@dimen/icon_medium"
+                android:layout_height="@dimen/icon_medium"
+                android:src="@drawable/ic_shield_check"
+                app:tint="@color/text_secondary"
+                android:contentDescription="Security" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/space_12"
+                android:text="@string/onboarding_security_notice"
+                style="@style/TextAppearance.Vit.Caption" />
+        </LinearLayout>
+
+        <!-- Credentials Input Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_surface"
+            android:padding="@dimen/space_20"
+            android:layout_marginBottom="@dimen/space_20">
+
+            <!-- Registration Number Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/onboard_reg_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_reg_number"
+                android:layout_marginBottom="@dimen/space_16"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="@dimen/radius_medium"
+                app:boxCornerRadiusTopEnd="@dimen/radius_medium"
+                app:boxCornerRadiusBottomStart="@dimen/radius_medium"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_medium"
+                app:boxStrokeColor="@color/surface_border"
+                app:boxStrokeWidth="@dimen/stroke_thin"
+                app:boxBackgroundColor="@color/surface_subsurface">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onboard_reg_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters|textNoSuggestions"
+                    android:maxLines="1"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:paddingVertical="@dimen/space_16"
+                    android:paddingHorizontal="@dimen/space_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/onboard_pass_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_password"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="@dimen/radius_medium"
+                app:boxCornerRadiusTopEnd="@dimen/radius_medium"
+                app:boxCornerRadiusBottomStart="@dimen/radius_medium"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_medium"
+                app:boxStrokeColor="@color/surface_border"
+                app:boxStrokeWidth="@dimen/stroke_thin"
+                app:boxBackgroundColor="@color/surface_subsurface"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/text_secondary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onboard_pass_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif"
+                    android:paddingVertical="@dimen/space_16"
+                    android:paddingHorizontal="@dimen/space_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Real-time Error Text -->
+            <TextView
+                android:id="@+id/onboard_error_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:textColor="@color/status_error"
+                style="@style/TextAppearance.Vit.Caption"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Auto-login Switch Option -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_card_surface"
+            android:paddingHorizontal="@dimen/space_16"
+            android:paddingVertical="@dimen/space_16"
+            android:layout_marginBottom="@dimen/space_28">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pref_auto_login"
+                    style="@style/TextAppearance.Vit.Body" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:text="@string/pref_auto_login_summary"
+                    style="@style/TextAppearance.Vit.Subhead" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/onboard_auto_login_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:theme="@style/AppTheme" />
+        </LinearLayout>
+
+        <!-- Primary Action Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/onboard_submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onboarding_cta"
+            style="@style/VitButtonPrimary" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

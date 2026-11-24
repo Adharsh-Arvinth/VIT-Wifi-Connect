@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Mode Surface Palette (Refined Neutral Ramp) -->
+    <color name="surface_background">#F8F9FA</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="surface_elevated">#F1F3F5</color>
+    <color name="surface_subsurface">#F4F4F6</color>
+    <color name="surface_border">#E4E4E7</color>
+    <color name="surface_divider">#E4E4E7</color>
+
+    <!-- Light Mode Typography -->
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#4B5563</color>
+    <color name="text_muted">#9CA3AF</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Monochrome Accent -->
+    <color name="accent_primary">#111827</color>
+    <color name="accent_secondary">#4B5563</color>
+    <color name="accent_subtle">#F4F4F6</color>
+
+    <!-- Restrained Semantic States -->
+    <color name="status_connected">#059669</color>
+    <color name="status_connecting">#D97706</color>
+    <color name="status_disconnected">#9CA3AF</color>
+    <color name="status_error">#DC2626</color>
+
+    <color name="color_success">#059669</color>
+    <color name="color_error">#DC2626</color>
+    <color name="color_warning">#D97706</color>
+
+    <!-- Network Activity Chart Tokens -->
+    <color name="chart_bar_fill">#18181B</color>
+    <color name="chart_bar_muted">#E4E4E7</color>
+
+    <!-- Liquid Glass Tokens (Light Mode - Frosted Ice Optics) -->
+    <color name="glass_fill_start">#E8FFFFFF</color>
+    <color name="glass_fill_end">#C4F1F3F6</color>
+    <color name="glass_specular_top">#B0FFFFFF</color>
+    <color name="glass_specular_bottom">#12000000</color>
+    <color name="glass_border_top">#A0FFFFFF</color>
+    <color name="glass_border_bottom">#15000000</color>
+    <color name="glass_subsurface">#50F0F2F5</color>
+    <color name="glass_pill">#70FFFFFF</color>
+    <color name="glass_glow">#20000000</color>
+</resources>

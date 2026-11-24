@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 4dp Grid Spacing Tokens -->
+    <dimen name="space_2">2dp</dimen>
+    <dimen name="space_4">4dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_12">12dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_20">20dp</dimen>
+    <dimen name="space_24">24dp</dimen>
+    <dimen name="space_28">28dp</dimen>
+    <dimen name="space_32">32dp</dimen>
+    <dimen name="space_40">40dp</dimen>
+    <dimen name="space_48">48dp</dimen>
+    <dimen name="space_56">56dp</dimen>
+    <dimen name="space_64">64dp</dimen>
+
+    <!-- Nested Radii Tokens -->
+    <dimen name="radius_small">6dp</dimen>
+    <dimen name="radius_medium">10dp</dimen>
+    <dimen name="radius_subsurface">14dp</dimen>
+    <dimen name="radius_button">27dp</dimen>
+    <dimen name="radius_large">16dp</dimen>
+    <dimen name="radius_panel">24dp</dimen>
+    <dimen name="radius_card">24dp</dimen>
+    <dimen name="radius_pill">27dp</dimen>
+
+    <!-- Hairline Stroke -->
+    <dimen name="stroke_thin">1dp</dimen>
+
+    <!-- Standard Icon Sizes (16/18/20/24dp) -->
+    <dimen name="icon_tiny">14dp</dimen>
+    <dimen name="icon_small">16dp</dimen>
+    <dimen name="icon_medium">20dp</dimen>
+    <dimen name="icon_large">24dp</dimen>
+    <dimen name="icon_hero">32dp</dimen>
+
+    <!-- Accessible Touch Target -->
+    <dimen name="touch_target">48dp</dimen>
+    <dimen name="row_min_height">56dp</dimen>
+
+    <!-- Widget -->
+    <dimen name="widget_corner_radius">16dp</dimen>
+    <dimen name="widget_padding">16dp</dimen>
+</resources>

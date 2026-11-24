@@ -1,0 +1,129 @@
+<resources>
+    <string name="app_name">VIT WiFi Connect</string>
+
+    <!-- Onboarding Flow -->
+    <string name="onboarding_title">Campus WiFi</string>
+    <string name="onboarding_subtitle">Automatic, reliable authentication for VIT campus network</string>
+    <string name="onboarding_security_notice">Credentials are encrypted with Android Keystore on your device and never transmitted externally</string>
+    <string name="onboarding_cta">Save and Connect</string>
+
+    <!-- Home Screen Status -->
+    <string name="status_connected">Connected</string>
+    <string name="status_connecting">Connecting</string>
+    <string name="status_authenticating">Authenticating</string>
+    <string name="status_ready">Ready to connect</string>
+    <string name="status_credentials_required">Credentials required</string>
+    <string name="status_disconnected">WiFi disconnected</string>
+    <string name="status_not_vit">Non-campus network</string>
+    <string name="status_error">Authentication failed</string>
+    <string name="status_invalid_credentials">Invalid credentials</string>
+    <string name="status_portal_unreachable">Portal unreachable</string>
+
+    <!-- Network Detail Labels -->
+    <string name="label_network_active">VIT WiFi</string>
+    <string name="label_internet_active">Internet active</string>
+    <string name="label_auth_needed">Authentication required</string>
+    <string name="label_wifi_disabled">WiFi disabled</string>
+    <string name="label_other_network">Connected to non-VIT network</string>
+
+    <!-- Primary Actions -->
+    <string name="action_connect">Connect</string>
+    <string name="action_reconnect">Reconnect</string>
+    <string name="action_disconnect">Disconnect</string>
+    <string name="action_logout">Logout Session</string>
+
+    <!-- Network Activity & Session Metrics -->
+    <string name="section_activity">Network activity</string>
+    <string name="label_download">Download</string>
+    <string name="label_upload">Upload</string>
+    <string name="label_session_time">Session time</string>
+    <string name="label_data_transferred">Data usage</string>
+
+    <!-- Settings Sections -->
+    <string name="title_settings">Settings</string>
+
+    <!-- Account Section -->
+    <string name="section_account">Account &amp; Session</string>
+    <string name="pref_auto_login">Auto-login on Connect</string>
+    <string name="pref_auto_login_summary">Authenticate automatically when VIT WiFi is detected</string>
+    <string name="pref_no_background">Zero-Drain Mode (No Background)</string>
+    <string name="pref_no_background_summary">Stop background monitoring when connected to save RAM and battery</string>
+    <string name="pref_session_logout">Logout from Campus Gateway</string>
+    <string name="pref_session_logout_summary">Release your account MAC session on Pronto</string>
+    <string name="pref_update_credentials">Update Credentials</string>
+    <string name="pref_update_credentials_summary">Registration number and password</string>
+    <string name="pref_clear_credentials">Clear Saved Credentials</string>
+    <string name="pref_clear_credentials_summary">Remove credentials from Keystore</string>
+
+    <!-- Appearance Section -->
+    <string name="section_appearance">Appearance</string>
+    <string name="pref_theme">Theme</string>
+    <string name="pref_theme_summary">System Default</string>
+    <string name="pref_accent_color">Color Palette</string>
+    <string name="pref_accent_color_summary">Emerald</string>
+    <string name="pref_dynamic_colors">Dynamic Colors</string>
+    <string name="pref_dynamic_colors_summary">Material You</string>
+    <string name="pref_chart_colors">Chart Bar Colors</string>
+    <string name="pref_chart_colors_summary">Material Dynamic</string>
+    <string name="pref_haptic_feedback">Haptic Feedback</string>
+    <string name="pref_haptic_summary">Tactile response on interaction</string>
+
+    <!-- Campus Network Guide -->
+    <string name="section_campus_guide">Campus Wi-Fi Stability</string>
+    <string name="pref_mac_guide">Disable MAC Randomization</string>
+    <string name="pref_mac_guide_summary">Prevents campus Wi-Fi from disconnecting every few minutes</string>
+    <string name="dialog_mac_guide_title">Prevent Wi-Fi Disconnects</string>
+    <string name="dialog_mac_guide_message">VIT campus routers track active connections by your device\'s hardware MAC address.\n\nModern phones enable \"Randomized MAC\" by default, which changes your MAC periodically and kicks you off the network!\n\nTo fix:\n1. Open Android Settings &gt; Network &amp; internet &gt; Wi-Fi.\n2. Tap the gear/settings icon next to your connected VIT Wi-Fi (e.g. F-VIT).\n3. Tap Privacy.\n4. Change from \"Use randomized MAC\" to \"Use device MAC\".\n\nYour connection will now remain stable without unexpected disconnects!</string>
+
+    <!-- Data Management Section -->
+    <string name="section_data">Data Management</string>
+    <string name="pref_speed_units">Speed Units</string>
+    <string name="pref_speed_units_summary">Bits per second (bps)</string>
+    <string name="pref_clear_stats">Clear Stats</string>
+    <string name="pref_clear_stats_summary">Reset usage history</string>
+
+    <!-- System Integrations -->
+    <string name="section_integrations">System Integrations</string>
+    <string name="pref_tile_shortcut">Control Center Tile</string>
+    <string name="pref_tile_summary">One-tap connect from Quick Settings</string>
+    <string name="pref_widget_shortcut">Home Screen Widget</string>
+    <string name="pref_widget_summary">One-tap connect from your Home Screen</string>
+    <string name="dialog_tile_guide_title">Control Center Tile</string>
+    <string name="dialog_tile_guide_message">1. Swipe down from the top of your screen twice to open Control Center.\n2. Tap the pencil (Edit) icon.\n3. Scroll to find \"VIT WiFi\".\n4. Drag it into your active tiles for 1-tap connection.</string>
+    <string name="dialog_widget_guide_title">Home Screen Widget</string>
+    <string name="dialog_widget_guide_message">1. Long-press on an empty space on your Home Screen.\n2. Tap \"Widgets\".\n3. Select \"VIT WiFi Connect\".\n4. Place it on your Home Screen for instant 1-tap connection.</string>
+    <string name="msg_tile_requested">Tile added to Control Center</string>
+    <string name="msg_widget_requested">Widget added to Home Screen</string>
+    <string name="dialog_ok">Got it</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_clear_stats_title">Reset usage history</string>
+    <string name="dialog_clear_stats_message">Reset session transfer totals and activity history? This action cannot be undone.</string>
+    <string name="dialog_clear_stats_confirm">Reset</string>
+    <string name="dialog_clear_credentials_title">Clear saved credentials</string>
+    <string name="dialog_clear_credentials_message">Remove your registration number and password from encrypted storage? You will need to enter them again to connect.</string>
+    <string name="dialog_clear_credentials_confirm">Remove</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <!-- Credentials Screen -->
+    <string name="title_credentials">Credentials</string>
+    <string name="subtitle_credentials">Stored with hardware-backed encryption on this device</string>
+    <string name="hint_reg_number">Registration number</string>
+    <string name="hint_password">Password</string>
+    <string name="action_save_credentials">Save credentials</string>
+    <string name="action_back">Back</string>
+    <string name="error_reg_required">Registration number is required</string>
+    <string name="error_pass_required">Password is required</string>
+    <string name="msg_credentials_saved">Credentials saved</string>
+    <string name="msg_credentials_cleared">Credentials removed</string>
+    <string name="msg_stats_cleared">Usage history reset</string>
+
+    <!-- Widget & Tile -->
+    <string name="widget_title">VIT WiFi</string>
+    <string name="widget_description">Shows connection status and provides one-tap campus WiFi connect</string>
+    <string name="tile_label">VIT WiFi</string>
+    <string name="tile_subtitle_connected">Connected</string>
+    <string name="tile_subtitle_disconnected">Disconnected</string>
+    <string name="tile_subtitle_authenticating">Authenticating</string>
+    <string name="tile_subtitle_ready">Tap to connect</string>
+</resources>

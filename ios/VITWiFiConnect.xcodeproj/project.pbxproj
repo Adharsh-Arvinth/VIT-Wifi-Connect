@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA1000012CE8000100000001 /* VITWiFiConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2000012CE8000100000001 /* VITWiFiConnectApp.swift */; };
+		AA1000022CE8000100000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2000022CE8000100000001 /* ContentView.swift */; };
+		AA1000032CE8000100000001 /* AuthConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2000032CE8000100000001 /* AuthConstants.swift */; };
+		AA1000042CE8000100000001 /* CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2000042CE8000100000001 /* CredentialStore.swift */; };
+		AA1000052CE8000100000001 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2000052CE8000100000001 /* SettingsStore.swift */; };
+		AA1000062CE8000100000001 /* NetworkDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2000062CE8000100000001 /* NetworkDetector.swift */; };
+		AA1000072CE8000100000001 /* CaptivePortalMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2000072CE8000100000001 /* CaptivePortalMonitor.swift */; };
+		AA1000082CE8000100000001 /* PortalAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2000082CE8000100000001 /* PortalAuthenticator.swift */; };
+		AA1000092CE8000100000001 /* ConnectionOrbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2000092CE8000100000001 /* ConnectionOrbView.swift */; };
+		AA10000A2CE8000100000001 /* NetworkHistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20000A2CE8000100000001 /* NetworkHistogramView.swift */; };
+		AA10000B2CE8000100000001 /* HapticHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20000B2CE8000100000001 /* HapticHelper.swift */; };
+		AA10000C2CE8000100000001 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20000C2CE8000100000001 /* HomeView.swift */; };
+		AA10000D2CE8000100000001 /* CredentialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20000D2CE8000100000001 /* CredentialsView.swift */; };
+		AA10000E2CE8000100000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20000E2CE8000100000001 /* SettingsView.swift */; };
+		AA10000F2CE8000100000001 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20000F2CE8000100000001 /* OnboardingView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA0000012CE8000100000001 /* VITWiFiConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VITWiFiConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA2000012CE8000100000001 /* VITWiFiConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VITWiFiConnectApp.swift; sourceTree = "<group>"; };
+		AA2000022CE8000100000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA2000032CE8000100000001 /* AuthConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConstants.swift; sourceTree = "<group>"; };
+		AA2000042CE8000100000001 /* CredentialStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialStore.swift; sourceTree = "<group>"; };
+		AA2000052CE8000100000001 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		AA2000062CE8000100000001 /* NetworkDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDetector.swift; sourceTree = "<group>"; };
+		AA2000072CE8000100000001 /* CaptivePortalMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptivePortalMonitor.swift; sourceTree = "<group>"; };
+		AA2000082CE8000100000001 /* PortalAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalAuthenticator.swift; sourceTree = "<group>"; };
+		AA2000092CE8000100000001 /* ConnectionOrbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionOrbView.swift; sourceTree = "<group>"; };
+		AA20000A2CE8000100000001 /* NetworkHistogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHistogramView.swift; sourceTree = "<group>"; };
+		AA20000B2CE8000100000001 /* HapticHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticHelper.swift; sourceTree = "<group>"; };
+		AA20000C2CE8000100000001 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AA20000D2CE8000100000001 /* CredentialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsView.swift; sourceTree = "<group>"; };
+		AA20000E2CE8000100000001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AA20000F2CE8000100000001 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		AA2000102CE8000100000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA3000012CE8000100000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA4000012CE8000100000001 = {
+			isa = PBXGroup;
+			children = (
+				AA4000022CE8000100000001 /* VITWiFiConnect */,
+				AA4000032CE8000100000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA4000022CE8000100000001 /* VITWiFiConnect */ = {
+			isa = PBXGroup;
+			children = (
+				AA4000042CE8000100000001 /* App */,
+				AA4000052CE8000100000001 /* Data */,
+				AA4000062CE8000100000001 /* Networking */,
+				AA4000072CE8000100000001 /* UI */,
+				AA2000102CE8000100000001 /* Info.plist */,
+			);
+			path = VITWiFiConnect;
+			sourceTree = "<group>";
+		};
+		AA4000042CE8000100000001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AA2000012CE8000100000001 /* VITWiFiConnectApp.swift */,
+				AA2000022CE8000100000001 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AA4000052CE8000100000001 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AA2000032CE8000100000001 /* AuthConstants.swift */,
+				AA2000042CE8000100000001 /* CredentialStore.swift */,
+				AA2000052CE8000100000001 /* SettingsStore.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AA4000062CE8000100000001 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AA2000062CE8000100000001 /* NetworkDetector.swift */,
+				AA2000072CE8000100000001 /* CaptivePortalMonitor.swift */,
+				AA2000082CE8000100000001 /* PortalAuthenticator.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AA4000072CE8000100000001 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AA20000C2CE8000100000001 /* HomeView.swift */,
+				AA20000D2CE8000100000001 /* CredentialsView.swift */,
+				AA20000E2CE8000100000001 /* SettingsView.swift */,
+				AA20000F2CE8000100000001 /* OnboardingView.swift */,
+				AA4000082CE8000100000001 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AA4000082CE8000100000001 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AA2000092CE8000100000001 /* ConnectionOrbView.swift */,
+				AA20000A2CE8000100000001 /* NetworkHistogramView.swift */,
+				AA20000B2CE8000100000001 /* HapticHelper.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AA4000032CE8000100000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000012CE8000100000001 /* VITWiFiConnect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA5000012CE8000100000001 /* VITWiFiConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA6000012CE8000100000001 /* Build configuration list for PBXNativeTarget "VITWiFiConnect" */;
+			buildPhases = (
+				AA7000012CE8000100000001 /* Sources */,
+				AA3000012CE8000100000001 /* Frameworks */,
+				AA8000012CE8000100000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VITWiFiConnect;
+			productName = VITWiFiConnect;
+			productReference = AA0000012CE8000100000001 /* VITWiFiConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA9000012CE8000100000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AA5000012CE8000100000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AA6000022CE8000100000001 /* Build configuration list for PBXProject "VITWiFiConnect" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA4000012CE8000100000001;
+			productRefGroup = AA4000032CE8000100000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA5000012CE8000100000001 /* VITWiFiConnect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA8000012CE8000100000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA7000012CE8000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA1000012CE8000100000001 /* VITWiFiConnectApp.swift in Sources */,
+				AA1000022CE8000100000001 /* ContentView.swift in Sources */,
+				AA1000032CE8000100000001 /* AuthConstants.swift in Sources */,
+				AA1000042CE8000100000001 /* CredentialStore.swift in Sources */,
+				AA1000052CE8000100000001 /* SettingsStore.swift in Sources */,
+				AA1000062CE8000100000001 /* NetworkDetector.swift in Sources */,
+				AA1000072CE8000100000001 /* CaptivePortalMonitor.swift in Sources */,
+				AA1000082CE8000100000001 /* PortalAuthenticator.swift in Sources */,
+				AA1000092CE8000100000001 /* ConnectionOrbView.swift in Sources */,
+				AA10000A2CE8000100000001 /* NetworkHistogramView.swift in Sources */,
+				AA10000B2CE8000100000001 /* HapticHelper.swift in Sources */,
+				AA10000C2CE8000100000001 /* HomeView.swift in Sources */,
+				AA10000D2CE8000100000001 /* CredentialsView.swift in Sources */,
+				AA10000E2CE8000100000001 /* SettingsView.swift in Sources */,
+				AA10000F2CE8000100000001 /* OnboardingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BA1000012CE8000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA1000022CE8000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA2000012CE8000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VITWiFiConnect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitwificonnect.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA2000022CE8000100000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VITWiFiConnect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vitwificonnect.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA6000012CE8000100000001 /* Build configuration list for PBXNativeTarget "VITWiFiConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA2000012CE8000100000001 /* Debug */,
+				BA2000022CE8000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA6000022CE8000100000001 /* Build configuration list for PBXProject "VITWiFiConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA1000012CE8000100000001 /* Debug */,
+				BA1000022CE8000100000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = AA9000012CE8000100000001 /* Project object */;
+}

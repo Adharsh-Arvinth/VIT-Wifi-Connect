@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Signature Apple Music Atmospheric Ambient Glow Backdrop -->
+    <com.vitwificonnect.ui.view.AmbientBackdropView
+        android:id="@+id/ambient_backdrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/space_20"
+            android:paddingTop="@dimen/space_24"
+            android:paddingBottom="@dimen/space_32">
+
+            <!-- Top Bar: Branding & Settings Access -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/space_16">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/app_logo_hero"
+                    android:layout_marginEnd="@dimen/space_12"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/app_name"
+                    style="@style/TextAppearance.Vit.Title" />
+
+                <!-- Settings Button (Apple Music Glass Circle) -->
+                <ImageButton
+                    android:id="@+id/btn_settings"
+                    style="@style/VitIconButtonGlass"
+                    android:src="@drawable/ic_settings"
+                    app:tint="@color/text_primary"
+                    android:contentDescription="@string/title_settings" />
+            </LinearLayout>
+
+            <!-- Signature Liquid Glass Status Hero Card -->
+            <com.vitwificonnect.ui.view.LiquidGlassCardView
+                android:id="@+id/card_hero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:paddingHorizontal="@dimen/space_24"
+                    android:paddingVertical="@dimen/space_28">
+
+                    <!-- Micro Status Capsule / Network Badge -->
+                    <LinearLayout
+                        android:id="@+id/layout_status_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginBottom="@dimen/space_16"
+                        android:background="@drawable/bg_glass_subsurface">
+
+                        <View
+                            android:id="@+id/view_status_dot"
+                            android:layout_width="6dp"
+                            android:layout_height="6dp"
+                            android:layout_marginEnd="6dp"
+                            android:background="@drawable/bg_indicator_dot" />
+
+                        <TextView
+                            android:id="@+id/tv_status_badge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Connected · Campus 5G"
+                            android:letterSpacing="0.01"
+                            android:textAllCaps="false"
+                            android:fontFamily="sans-serif-medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_secondary" />
+                    </LinearLayout>
+
+                    <!-- Custom Connection Indicator -->
+                    <com.vitwificonnect.ui.view.ConnectionIndicatorView
+                        android:id="@+id/connection_indicator"
+                        android:layout_width="104dp"
+                        android:layout_height="104dp"
+                        android:layout_marginBottom="@dimen/space_16" />
+
+                    <!-- Primary Status Title -->
+                    <TextView
+                        android:id="@+id/tv_connection_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/status_ready"
+                        style="@style/TextAppearance.Vit.Title"
+                        android:textSize="20sp"
+                        android:gravity="center" />
+
+                    <!-- Network / Portal Sub-detail -->
+                    <TextView
+                        android:id="@+id/tv_connection_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_4"
+                        android:text="@string/label_network_active"
+                        style="@style/TextAppearance.Vit.Subhead"
+                        android:gravity="center" />
+
+                    <!-- Primary Action Button (When Disconnected / Connecting) -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_connect"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginTop="@dimen/space_24"
+                        android:text="@string/action_connect"
+                        app:icon="@drawable/ic_wifi_connected"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        style="@style/VitButtonPrimary" />
+
+                    <!-- Dual Action Container (When Connected) -->
+                    <LinearLayout
+                        android:id="@+id/layout_connected_actions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/space_24"
+                        android:visibility="gone">
+
+                        <!-- Instant Disconnect Button (One Click Disconnect from Network) -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_disconnect"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="@dimen/space_8"
+                            android:text="Disconnect"
+                            app:icon="@drawable/ic_wifi_disconnected"
+                            app:iconGravity="textStart"
+                            app:iconPadding="8dp"
+                            style="@style/VitButtonSecondary" />
+
+                        <!-- Reconnect / Refresh Button -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_reconnect"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/space_8"
+                            android:text="Reconnect"
+                            app:icon="@drawable/ic_refresh"
+                            app:iconGravity="textStart"
+                            app:iconPadding="8dp"
+                            style="@style/VitButtonPrimary" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.vitwificonnect.ui.view.LiquidGlassCardView>
+
+            <!-- Network Activity & Session Metrics Liquid Glass Card -->
+            <com.vitwificonnect.ui.view.LiquidGlassCardView
+                android:id="@+id/card_network_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_20">
+
+                    <!-- Card Header: Title & Live Rates -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/space_12">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/section_activity"
+                            style="@style/TextAppearance.Vit.Section" />
+
+                        <!-- Throughput Summary in Glass Capsules -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <!-- Download Capsule -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="26dp"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/bg_glass_subsurface"
+                                android:paddingHorizontal="8dp"
+                                android:layout_marginEnd="6dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_speed_down"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:src="@drawable/ic_speed_down"
+                                    app:tint="@color/text_secondary"
+                                    android:contentDescription="Download" />
+
+                                <TextView
+                                    android:id="@+id/tv_speed_down"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="0.0 bps"
+                                    style="@style/TextAppearance.Vit.Mono"
+                                    android:textColor="@color/text_primary" />
+                            </LinearLayout>
+
+                            <!-- Upload Capsule -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="26dp"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/bg_glass_subsurface"
+                                android:paddingHorizontal="8dp">
+
+                                <ImageView
+                                    android:id="@+id/iv_speed_up"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:src="@drawable/ic_speed_up"
+                                    app:tint="@color/text_secondary"
+                                    android:contentDescription="Upload" />
+
+                                <TextView
+                                    android:id="@+id/tv_speed_up"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="0.0 bps"
+                                    style="@style/TextAppearance.Vit.Mono"
+                                    android:textColor="@color/text_primary" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Network Histogram Visualizer -->
+                    <com.vitwificonnect.ui.view.NetworkHistogramView
+                        android:id="@+id/network_histogram"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="@dimen/space_16" />
+
+                    <!-- Bottom Session Metrics Grid -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+                        <!-- Session Duration -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_glass_subsurface"
+                            android:padding="@dimen/space_12"
+                            android:layout_marginEnd="@dimen/space_8">
+
+                            <ImageView
+                                android:id="@+id/iv_session_clock"
+                                android:layout_width="@dimen/icon_small"
+                                android:layout_height="@dimen/icon_small"
+                                android:src="@drawable/ic_clock"
+                                app:tint="@color/text_secondary"
+                                android:contentDescription="Time" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="@dimen/space_8">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/label_session_time"
+                                    style="@style/TextAppearance.Vit.Caption" />
+
+                                <TextView
+                                    android:id="@+id/tv_session_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="00:00"
+                                    style="@style/TextAppearance.Vit.Mono"
+                                    android:textColor="@color/text_primary" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Data Transferred -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_glass_subsurface"
+                            android:padding="@dimen/space_12"
+                            android:layout_marginStart="@dimen/space_8">
+
+                            <ImageView
+                                android:id="@+id/iv_session_stats"
+                                android:layout_width="@dimen/icon_small"
+                                android:layout_height="@dimen/icon_small"
+                                android:src="@drawable/ic_stats"
+                                app:tint="@color/text_secondary"
+                                android:contentDescription="Data" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginStart="@dimen/space_8">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/label_data_transferred"
+                                    style="@style/TextAppearance.Vit.Caption" />
+
+                                <TextView
+                                    android:id="@+id/tv_data_transferred"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0 B"
+                                    style="@style/TextAppearance.Vit.Mono"
+                                    android:textColor="@color/text_primary" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.vitwificonnect.ui.view.LiquidGlassCardView>
+
+            <!-- Quick Setting: Auto-login Switch Liquid Glass Card -->
+            <com.vitwificonnect.ui.view.LiquidGlassCardView
+                android:id="@+id/card_quick_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/space_16"
+                    android:paddingVertical="@dimen/space_16">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pref_auto_login"
+                            style="@style/TextAppearance.Vit.Body" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_2"
+                            android:text="@string/pref_auto_login_summary"
+                            style="@style/TextAppearance.Vit.Subhead" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_auto_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/AppTheme" />
+                </LinearLayout>
+
+            </com.vitwificonnect.ui.view.LiquidGlassCardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

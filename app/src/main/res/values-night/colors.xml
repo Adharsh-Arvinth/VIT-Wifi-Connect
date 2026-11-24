@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Mode Surface Palette (Deep Balanced Charcoal & Graphite) -->
+    <color name="surface_background">#0D0D10</color>
+    <color name="surface_card">#16161A</color>
+    <color name="surface_elevated">#202026</color>
+    <color name="surface_subsurface">#1C1C22</color>
+    <color name="surface_border">#27272F</color>
+    <color name="surface_divider">#27272F</color>
+
+    <!-- Dark Mode Typography -->
+    <color name="text_primary">#F4F4F6</color>
+    <color name="text_secondary">#A1A1AA</color>
+    <color name="text_muted">#71717A</color>
+    <color name="text_on_primary">#0D0D10</color>
+
+    <!-- Monochrome Accent -->
+    <color name="accent_primary">#F4F4F6</color>
+    <color name="accent_secondary">#A1A1AA</color>
+    <color name="accent_subtle">#202026</color>
+
+    <!-- Restrained Semantic States -->
+    <color name="status_connected">#10B981</color>
+    <color name="status_connecting">#F59E0B</color>
+    <color name="status_disconnected">#71717A</color>
+    <color name="status_error">#EF4444</color>
+
+    <color name="color_success">#10B981</color>
+    <color name="color_error">#EF4444</color>
+    <color name="color_warning">#F59E0B</color>
+
+    <!-- Network Activity Chart Tokens -->
+    <color name="chart_bar_fill">#F4F4F6</color>
+    <color name="chart_bar_muted">#27272F</color>
+
+    <!-- Liquid Glass Tokens (Dark Mode - Smoked Acrylic Optics) -->
+    <color name="glass_fill_start">#1AFFFFFF</color>
+    <color name="glass_fill_end">#0BFFFFFF</color>
+    <color name="glass_specular_top">#44FFFFFF</color>
+    <color name="glass_specular_bottom">#06FFFFFF</color>
+    <color name="glass_border_top">#45FFFFFF</color>
+    <color name="glass_border_bottom">#08FFFFFF</color>
+    <color name="glass_subsurface">#12FFFFFF</color>
+    <color name="glass_pill">#20FFFFFF</color>
+    <color name="glass_glow">#30000000</color>
+</resources>
